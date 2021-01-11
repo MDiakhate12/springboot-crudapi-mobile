@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Gestion des clients</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="button_save">Enregistrer</string>
+    <string name="empty_not_saved">"Impossible d'enregister un client vide".</string>
+    <string name="add_client">Ajouter Client</string>
+    <string name="hint_prenom">Prénom…</string>
+    <string name="hint_nom">Nom…</string>
+    <string name="hint_telephone">Numéro de téléphone…</string>
+</resources>
