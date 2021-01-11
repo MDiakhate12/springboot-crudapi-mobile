@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements ConfirmationDialo
                     public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
                         int position = viewHolder.getAdapterPosition();
                         Client client = clientListAdapter.getClientAtPosition(position);
-                        Toast.makeText(MainActivity.this, "Deleting client" +
+                        Toast.makeText(MainActivity.this, "Suppression du client " +
                                 client.getPrenom() + " " + client.getNom(), Toast.LENGTH_LONG).show();
 
                         // Delete the word
@@ -106,8 +106,8 @@ public class MainActivity extends AppCompatActivity implements ConfirmationDialo
             } else if (requestCode == UPDATE_CLIENT_ACTIVITY_REQUEST_CODE) {
                 client.setId(ID_EXTRA_REQUEST);
                 clientViewModel.update(client);
-                Log.d("DIAF UPDATE", "Updated client " + client);
-                Toast.makeText(MainActivity.this, "Updated client " +
+                Log.d("DIAF UPDATE", "Client " + client);
+                Toast.makeText(MainActivity.this, "Client Modifié avec succés: " +
                         client.getPrenom() + " " + client.getNom(), Toast.LENGTH_LONG).show();
             }
         }
@@ -136,7 +136,7 @@ public class MainActivity extends AppCompatActivity implements ConfirmationDialo
                     @Override
                     public void onItemClicked(RecyclerView recyclerView, int position, View v) {
                         Client client = clientListAdapter.getClientAtPosition(position);
-                        Toast.makeText(MainActivity.this, "Updating client " +
+                        Toast.makeText(MainActivity.this, "Modification du client " +
                                 client.getPrenom() + " " + client.getNom(), Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(MainActivity.this, NewClientActivity.class);
 
